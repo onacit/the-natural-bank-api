@@ -1,0 +1,35 @@
+<configuration>
+
+  <appender name="console-info" class="ch.qos.logback.core.ConsoleAppender">
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>info</level>
+    </filter>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="console-debug" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="info">
+    <appender-ref ref="console-info"/>
+  </root>
+  <!--  <logger name="com.tngtech.archunit" level="info"/>-->
+  <!--  <logger name="com.zaxxer.hikari" level="info"/>-->
+  <!--  <logger name="net.javacrumbs.shedlock.core" level="info"/>-->
+  <!--  <logger name="io.netty" level="info"/>-->
+  <!--  <logger name="org.h2.jdbc." level="info"/>-->
+  <!--  <logger name="org.hibernate" level="info"/>-->
+  <!--  <logger name="org.mybatis" level="info"/>-->
+  <!--  <logger name="org.springframework" level="info"/>-->
+  <!--  <logger name="reactor.core" level="info"/>-->
+
+  <logger name="com.wemakeprice" level="debug">
+    <appender-ref ref="console-debug"/>
+  </logger>
+
+</configuration>

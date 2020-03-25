@@ -1,0 +1,43 @@
+<configuration>
+
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="console"/>
+  </root>
+  <logger name="com.tngtech.archunit" level="info"/>
+  <!--  <logger name="com.wemakeprice" level="debug"/>-->
+  <logger name="com.zaxxer.hikari" level="info"/>
+  <logger name="net.javacrumbs.shedlock.core" level="info"/>
+  <logger name="io.netty" level="info"/>
+  <logger name="org.h2.jdbc." level="info"/>
+  <logger name="org.hibernate" level="info"/>
+  <!--  <logger name="org.hibernate.SQL" level="debug"/>-->
+  <logger name="org.hibernate.boot" level="info"/>
+  <logger name="org.hibernate.cfg" level="info"/>
+  <logger name="org.hibernate.engine" level="info"/>
+  <logger name="org.hibernate.hsql" level="info"/>
+  <logger name="org.hibernate.id" level="info"/>
+  <logger name="org.hibernate.integrator" level="info"/>
+  <logger name="org.hibernate.internal" level="info"/>
+  <logger name="org.hibernate.jpa.internal" level="info"/>
+  <logger name="org.hibernate.loader" level="info"/>
+  <logger name="org.hibernate.persister" level="info"/>
+  <logger name="org.hibernate.service.spi" level="info"/>
+  <logger name="org.hibernate.stat" level="info"/>
+  <logger name="org.hibernate.validator.internal" level="info"/>
+  <logger name="org.hibernate.tool" level="info"/>
+  <logger name="org.hibernate.type" level="info"/>
+  <logger name="org.hibernate.type.descriptor.sql" level="trace"/>
+  <logger name="org.mybatis" level="info"/>
+  <logger name="org.springframework" level="info"/>
+  <logger name="org.springframework.beans" level="info"/>
+  <logger name="org.springframework.boot.autoconfigure.logging" level="info"/>
+  <logger name="org.springframework.jdbc" level="info"/>
+  <logger name="org.springframework.test" level="info"/>
+  <logger name="reactor.core" level="info"/>
+</configuration>

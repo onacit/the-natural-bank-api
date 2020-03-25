@@ -1,0 +1,25 @@
+spring:
+  data:
+    rest:
+      default-page-size: 128
+      max-page-size: 1024
+    web:
+      pageable:
+        default-page-size: 64
+        max-page-size: 512
+  datasource:
+    url: jdbc:mysql://localhost:33306/whomakeprice
+    username: whomakeprice
+    password: whomakeprice
+  jpa:
+    open-in-view: false
+  redis:
+    #    host: localhost # default
+    port: 36379
+# https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: shutdown
+        include: "*"
